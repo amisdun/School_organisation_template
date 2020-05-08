@@ -36,6 +36,7 @@ class Api::V1::UserSignupController < ApplicationController
           end
     
         end
+        
       else
 
         return render json: {res: "Unauthorized"}, status: :unauthorized
