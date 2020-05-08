@@ -72,10 +72,20 @@ class Api::V1::AdmissionLetterController < ApplicationController
 
     update_admission_letter = AdmissionCategory.AdmissionLetter.find(params[:id])
 
-    update_admission_letter.update()
+    if update_admission_letter.update_attributes({
+                                  :email => params[:email],
+                                  :student_name => params[:student_name],
+                                  :phone_number => params[:phone_number],
+                                  :student_address => params[:student_address],
+                                  :program_name =. params[:program_name]
+                                })
+        return render json: {res: "updated"}, status: :ok
 
   end
 
   def destroy
+
+    
+
   end
 end
