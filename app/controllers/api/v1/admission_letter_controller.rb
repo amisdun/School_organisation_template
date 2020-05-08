@@ -61,6 +61,11 @@ class Api::V1::AdmissionLetterController < ApplicationController
   end
 
   def show
+
+    show_single_admission = AdmissionCategory.AdmissionLetter.find(params[:id])
+
+    return render json: {res: "found"}, status: :ok
+    
   end
 
   def update
