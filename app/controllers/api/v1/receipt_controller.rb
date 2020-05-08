@@ -72,11 +72,11 @@ class Api::V1::ReceiptController < ApplicationController
     update_receipt = AccountCategory.Receipt.find(params[:id])
 
     if update_receipt.update_attributes({
-                                  :email => params[:email],
-                                  :student_name => params[:student_name],
-                                  :phone_number => params[:phone_number],
-                                  :student_address => params[:student_address],
-                                  :program_name =. params[:program_name]
+                              :student_name => params[:student_name],
+                              :amount_in_words => params[:amount_in_words],
+                              :amount_in_numbers => params[:amount_in_words],
+                              :index_number => params[:index_number],
+                              :date => params[:date]
                                 })
         return render json: {res: "updated"}, status: :ok
 
