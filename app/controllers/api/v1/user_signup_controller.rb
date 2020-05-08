@@ -1,3 +1,5 @@
+require 'jwt'
+require 'bcrypt'
 class Api::V1::UserSignupController < ApplicationController
   def create
 
@@ -39,7 +41,7 @@ class Api::V1::UserSignupController < ApplicationController
         return render json: {res: "Unauthorized"}, status: :unauthorized
       end
     else
-      
+
       return render json: {res: "provide user token in header"}, status: :unauthorized
     end
 

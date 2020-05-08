@@ -1,3 +1,6 @@
+require 'jwt'
+require 'bcrypt'
+
 class Api::V1::UserSiginController < ApplicationController
   def sigin
 
@@ -7,7 +10,7 @@ class Api::V1::UserSiginController < ApplicationController
       password_compare = BCrypt::Password.new(user_sigin.password)
 
       if password_compare = params[:password]
-        
+
         exp = Time.now.to_i + 4 * 3600
 
         exp_payload = {user_id: user_sigin._id, category_name: user_sigin.category_name, exp: exp}
