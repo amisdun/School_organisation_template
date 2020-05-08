@@ -85,7 +85,11 @@ class Api::V1::AdmissionLetterController < ApplicationController
 
   def destroy
 
-    
+    delete_admission_template = AdmissionCategory.AdmissionLetter.find(params[:id])
+
+    delete_admission_template.destroy
+
+    return render json: {res: "deleted"}, status: :ok
 
   end
 end
