@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student_name: MyString
+  amount_in_words: MyString
+  amount_in_numbers: 
+  index_number: MyString
+  date: MyString
+  signature: MyString
+
+two:
+  student_name: MyString
+  amount_in_words: MyString
+  amount_in_numbers: 
+  index_number: MyString
+  date: MyString
+  signature: MyString
