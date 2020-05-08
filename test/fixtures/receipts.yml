@@ -6,7 +6,6 @@ one:
   amount_in_numbers: 
   index_number: MyString
   date: MyString
-  signature: MyString
 
 two:
   student_name: MyString
@@ -14,4 +13,3 @@ two:
   amount_in_numbers: 
   index_number: MyString
   date: MyString
-  signature: MyString
