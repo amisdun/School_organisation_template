@@ -69,6 +69,11 @@ class Api::V1::AdmissionLetterController < ApplicationController
   end
 
   def update
+
+    update_admission_letter = AdmissionCategory.AdmissionLetter.find(params[:id])
+
+    update_admission_letter.update()
+
   end
 
   def destroy

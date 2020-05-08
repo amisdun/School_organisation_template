@@ -1,5 +1,6 @@
 class Receipt
   include Mongoid::Document
+  include Mongoid::Persistable
   include Mongoid::Timestamps
   field :student_name, type: String
   field :amount_in_words, type: String

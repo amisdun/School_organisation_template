@@ -1,5 +1,7 @@
 class AdmissionLetter
   include Mongoid::Document
+  include Mongoid::Persistable
+  include Mongoid::Persistable
   include Mongoid::Timestamps
   field :student_name, type: String
   field :email, type: String
